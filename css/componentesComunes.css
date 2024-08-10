@@ -1,11 +1,11 @@
 /* Contiene el formato de la barra de navegación, el bloque de las certificaciones y el pie de página */
 
 /* Formato al fondo de la aplicación */
-body, html {
+html, body {
     background-color: rgb(245, 238, 238);
     font-family: Garamond;
     max-width: 1500px;
-    padding: 2px;
+    padding: 4px;
 }
 
 /* Formato para el pie de página */
@@ -29,23 +29,24 @@ body, html {
 
 /* Formato para el bloque de certificaciones */
 .contenedorCertificaciones {
-    min-height: 90px;
+    min-height: 50px;
     background-color: #FFFFFF;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3px 2px;
+    column-gap: 80px;
+    margin-top: 3px;
 }
 
 .formatoCertificaciones {
-    max-height: 90px;
-    max-width: 90px;
+    max-width: 45px;
+    max-height: 45px;
 }
 
 .formatoCertificaciones1 {
-    max-height: 120px;
-    max-width: 120px;
+    max-width: 60px;
+    max-height: 40px;
 }
 
 /* Agregamos separación adicional a las certificaciones en dispositivos mas pequeños */
