@@ -30,7 +30,6 @@ html, body {
 /* Formato para el bloque de certificaciones */
 .contenedorCertificaciones {
     min-height: 120px;
-    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,8 +44,8 @@ html, body {
 }
 
 .formatoCertificaciones1 {
-    max-width: 120px;
-    max-height: 70px;
+    max-width: 140px;
+    max-height: 90px;
 }
 
 /* Agregamos separación adicional a las certificaciones en dispositivos mas pequeños */
@@ -58,4 +57,40 @@ html, body {
     .formatoCertificaciones1 {
         margin-top: 10px;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .formatoCertificaciones {
+        min-width: 50px;
+        min-height: 50px;
+    }
+    
+    .formatoCertificaciones1 {
+        min-width: 90px;
+        min-height: 50px;
+    }
+}
+
+/* Formato barra de navegación */
+.barraNavegacion {
+    background-color: rgb(255, 255, 255);
+    min-height: 100px;
+}
+
+.formatoLogoBarra {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 15px;
+}
+
+.formatoMenu {
+    font-family: 'Gill Sans MT', sans-serif;
+    /* color: rgb(128, 20, 138); */
+    font-weight: bold;
+    font-size: 14px;
+    column-gap: 10px;
+}
+
+li > a:hover {
+    text-decoration: underline;
 }

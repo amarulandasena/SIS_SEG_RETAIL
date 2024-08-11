@@ -26,6 +26,12 @@
     max-height: 250px;
 }
 
+@media screen and (max-width: 287px){
+    .formatologo {
+        min-width: 150px;
+        min-height: 150px;
+    }
+}
 
 
 
