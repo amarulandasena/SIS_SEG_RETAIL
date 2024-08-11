@@ -49,7 +49,7 @@ html, body {
 }
 
 /* Agregamos separación adicional a las certificaciones en dispositivos mas pequeños */
-@media screen and (max-width: 316px) {
+@media screen and (max-width: 520px) {
     .formatoCertificaciones {
         margin-top: 10px;
     }
