@@ -56,14 +56,14 @@
 .formatoInfoFundacion p {
     text-align: left;
     line-height: 1.3em;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:rgb(100, 96, 96);
 }
 
 /* Formato accesos directos y catálogos */
 .formatoAccesosYproductos {
-    padding: 10px 5px;
+    padding: 10px;
 }
 
 .formatoAccesosYproductos h3 {
@@ -71,6 +71,29 @@
     color:rgb(40, 155, 184);
     text-align: center;
     margin-top: 10px;
+}
+
+#accesosDirectos ul {
+    list-style-type: none;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    column-gap: 5px;
+}
+
+#accesosDirectos ul li {
+    min-height: 38px;
+    padding-top: 5px;
+}
+
+#accesosDirectos ul li a {
+    text-decoration: none;
+    color: rgb(80, 75, 75);
+}
+
+/* Generar el efecto del subrayado */
+#accesosDirectos ul li a:hover {
+    text-decoration: underline;
 }
 
 .formatoFondoCatalogos {
@@ -89,9 +112,16 @@
     column-gap: 80px;
 }
 
-@media screen and (max-width:771px) {
+.formatoCatalogos {
+    max-height: 225px;
+    max-width: 225px;
+}
+
+/* Cambiamos la orientación de los catálogos */
+@media screen and (max-width:1010px) {
+    
     .distribucionCatalogos {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 5px;
@@ -103,7 +133,37 @@
     }
 }
 
-.formatoCatalogos {
-    max-height: 225px;
-    max-width: 225px;
+/* Formato familia bel star */
+.formatoFotoColaborador {
+    width: 150px;
+    height: 200px;
+}
+
+/* Formato para el título mas las fotos */
+.formatoFamilia {
+    margin-top: 3px;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width:1010) {
+    .formatoFamilia {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+}
+
+.formatoFamilia h3 {
+    font: italic bold 20px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(40, 155, 184);
+    text-align: center;
+}
+
+.formatoFamilia p {
+    text-align: left;
+    line-height: 1.3em;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(100, 96, 96);
 }
