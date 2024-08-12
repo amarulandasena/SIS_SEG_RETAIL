@@ -131,6 +131,7 @@
         max-height: 112px;
         max-width: 112px;
     }
+
 }
 
 /* Formato familia bel star */
@@ -143,15 +144,6 @@
 .formatoFamilia {
     margin-top: 3px;
     padding: 10px 10px;
-}
-
-@media screen and (max-width:1010) {
-    .formatoFamilia {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 5px;
-    }
 }
 
 .formatoFamilia h3 {
@@ -167,3 +159,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:rgb(100, 96, 96);
 }
+
+@media screen and (max-width:1300px) {
+    .formatoFamilia p {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
