@@ -44,16 +44,8 @@
                         </li>
 
                         <!--Administrar usuarios-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Administrar usuarios
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item formatoMenu" href="#">Crear usuarios</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Modificar usuarios</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Eliminar usuarios</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Consultar usuarios</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../src/usuarios.html" target="_self">Administrar usuarios</a>
                         </li>
 
                         <!--Administrar datos de tiendas-->
@@ -123,7 +115,137 @@
             </div>
         </nav>
 
-        <!--Crear usuarios-->
+        <!--Usuarios-->
+        <section class = "container-fluid">
+
+            <!--Crear usuarios-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center">
+                    <h3>CREAR USUARIOS</h3>
+                    <div class="col-md-4">
+                        <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
+                        <select class="form-select" id="tipoIdentificacion" required>
+                          <option selected disabled value="">Seleecione el documento</option>
+                          <option>Cédula de ciudadanía</option>
+                          <option>Cédula de extranjería</option>
+                          <option>PEP</option>
+                          <option>Permiso por protección temporal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreUsuario" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombreUsuario" required placeholder="Como registra en su documento de identidad">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="apellidosUsuario" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidosUsuario" required placeholder="Como registra en su documento de identidad">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="rol" class="form-label">Rol o cargo</label>
+                        <select class="form-select" id="rol" required>
+                          <option selected disabled value="">Seleccione el cargo</option>
+                          <option>Gerente</option>
+                          <option>Gerente retail</option>
+                          <option>Supervisor</option>
+                          <option>Digitador</option>
+                          <option>Auxiliar de operaciones</option>
+                          <option>Segregador</option>
+                          <option>Marcador</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="contrasegna" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasegna" required placeholder="Mínimo 5 dígitos">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+                </form>
+            </article>
+            
+            <!--Modificar usuarios-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center">
+                    <h3>MODIFICAR USUARIOS</h3>
+                    <div class="col-md-5">
+                        <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
+                        <select class="form-select" id="tipoIdentificacion" required>
+                          <option selected disabled value="">Seleecione el documento</option>
+                          <option>Cédula de ciudadanía</option>
+                          <option>Cédula de extranjería</option>
+                          <option>PEP</option>
+                          <option>Permiso por protección temporal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </article>
+
+            <!--Eliminar usuarios-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center">
+                    <h3>ELIMINAR USUARIOS</h3>
+                    <div class="col-md-5">
+                        <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
+                        <select class="form-select" id="tipoIdentificacion" required>
+                          <option selected disabled value="">Seleecione el documento</option>
+                          <option>Cédula de ciudadanía</option>
+                          <option>Cédula de extranjería</option>
+                          <option>PEP</option>
+                          <option>Permiso por protección temporal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Eliminar</button>
+                    </div>
+                </form>
+            </article>
+
+            <!--Consultar usuarios-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center">
+                    <h3>CONSULTAR USUARIOS</h3>
+                    <div class="col-md-5">
+                        <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
+                        <select class="form-select" id="tipoIdentificacion" required>
+                          <option selected disabled value="">Seleecione el documento</option>
+                          <option>Cédula de ciudadanía</option>
+                          <option>Cédula de extranjería</option>
+                          <option>PEP</option>
+                          <option>Permiso por protección temporal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Consultar</button>
+                    </div>
+                </form>
+            </article>
+
+            <!--Botón para regresar a la página principal-->
+            <article class = "row formatoUsuarios text-center">
+                <a href = "../src/paginaPrincipal.html" target = "_self">
+                    <button class="btn btn-primary" type="button">Regresar a la página principal</button>
+                </a>
+            </article>
+        </section>
 
         <!--Bloque de certificaciones-->
         <div class = "container-fluid">

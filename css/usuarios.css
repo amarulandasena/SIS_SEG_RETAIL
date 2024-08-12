@@ -1,0 +1,16 @@
+.formatoUsuarios {
+    border: 3px solid rgb(245, 238, 238);
+    border-radius: 5px;
+    margin: 3px;
+    padding: 8px;
+
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: bold;
+    font-size: 13px;   
+}
+
+.formatoUsuarios h3 {
+    font: italic bold 20px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(40, 155, 184);
+    text-align: center;
+}
