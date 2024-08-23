@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head lang="es">
-        <base href="" target="_blank">
+        <base href="" target="_self">
         <meta charset="UTF-8">
         <meta name="viewport" content="with=device-with, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -49,18 +49,8 @@
                         </li>
 
                         <!--Administrar datos de tiendas-->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Administrar datos de tienda
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item formatoMenu" href="#">Crear tienda</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Actualizar tienda</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Eliminar tienda</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Consultar tienda</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Consultar histórico de tienda</a></li>
-                              <li><a class="dropdown-item formatoMenu" href="#">Eliminar histórico de tienda</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../src/AdministrarTiendas.html">Administrar datos de tienda</a>
                         </li>
 
                         <!--Administrar reservas-->
@@ -120,8 +110,8 @@
 
             <!--Crear usuarios-->
             <article class = "row formatoUsuarios">
-                <form class="row g-3 text-center">
-                    <h3>CREAR USUARIOS</h3>
+                <form class="row g-3 text-center needs-validation">
+                    <h3>CREAR USUARIO</h3>
                     <div class="col-md-4">
                         <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
                         <select class="form-select" id="tipoIdentificacion" required>
@@ -169,8 +159,8 @@
             
             <!--Modificar usuarios-->
             <article class = "row formatoUsuarios">
-                <form class="row g-3 text-center">
-                    <h3>MODIFICAR USUARIOS</h3>
+                <form class="row g-3 text-center needs-validation">
+                    <h3>MODIFICAR USUARIO</h3>
                     <div class="col-md-5">
                         <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
                         <select class="form-select" id="tipoIdentificacion" required>
@@ -186,15 +176,15 @@
                         <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-primary" type="submit">Buscar</button>
+                        <button class="btn btn-primary" type="submit">Modificar</button>
                     </div>
                 </form>
             </article>
 
             <!--Eliminar usuarios-->
             <article class = "row formatoUsuarios">
-                <form class="row g-3 text-center">
-                    <h3>ELIMINAR USUARIOS</h3>
+                <form class="row g-3 text-center needs-validation">
+                    <h3>ELIMINAR USUARIO</h3>
                     <div class="col-md-5">
                         <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
                         <select class="form-select" id="tipoIdentificacion" required>
@@ -217,8 +207,8 @@
 
             <!--Consultar usuarios-->
             <article class = "row formatoUsuarios">
-                <form class="row g-3 text-center">
-                    <h3>CONSULTAR USUARIOS</h3>
+                <form class="row g-3 text-center needs-validation">
+                    <h3>CONSULTAR USUARIO</h3>
                     <div class="col-md-5">
                         <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
                         <select class="form-select" id="tipoIdentificacion" required>

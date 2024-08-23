@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang=""es>
+    <head>
+        <base href="" target="_self">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="with=device-with, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="application-name" content="SIS SEG RETAIL">
+        <meta name="description" content="aplicación para marcar y segregar los productos">
+        <meta name="author" content="Andres Felipe Marulanda">
+        <meta name="keywords" content="Belcorp, bel star, retail, segmentar, marcar">
+
+        <link rel="stylesheet" href="../css/componentesComunes.css">
+        <link rel="stylesheet" href="../css/usuarios.css">
+
+        <title>
+            Sis seg retail * Tiendas
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--Encabezado y barra de navegación-->
+        <nav class="navbar navbar-expand-xl barraNavegacion">
+            <div class="container-fluid">
+                <img src = "../img/logo_belcorp.png" alt = "logo belcorp" class = "formatoLogoBarra">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 formatoMenu">
+
+                        <!--Supervisar retail-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Supervisar retail
+                            </a>
+                            <ul class="dropdown-menu">
+								<li><a class="dropdown-item formatoMenu" href="#">Salida</a></li>
+                              	<li><a class="dropdown-item formatoMenu" href="#">Gestionar informes</a></li>
+                              	<li><a class="dropdown-item formatoMenu" href="#">Equipo</a></li>
+                              	<li><a class="dropdown-item formatoMenu" href="#">Estado producto</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Administrar usuarios-->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../src/usuarios.html" target="_self">Administrar usuarios</a>
+                        </li>
+
+                        <!--Administrar datos de tiendas-->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../src/AdministrarTiendas.html">Administrar datos de tienda</a>
+                        </li>
+
+                        <!--Administrar reservas-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Administrar reservas
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item formatoMenu" href="#">Crear reserva</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Editar reserva</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Eliminar reserva</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Cargar productos-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Cargar productos
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item formatoMenu" href="#">Validar reserva</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Estados de la reserva</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Registrar marcado</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Ingresar segregados</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Contenedores-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Contenedores
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item formatoMenu" href="#">Asignar número contenedor</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Modificar número contenedor</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Eliminar número contenedor</a></li>
+                              <li><a class="dropdown-item formatoMenu" href="#">Consultar número contenedor</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Ayuda-->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Ayuda</a>
+                        </li>
+
+                        <!--Cerrar sesión-->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../src/login.html" target="_self">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Tiendas-->
+        <section class = "container-fluid">
+
+            <!--Crear tiendas-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center needs-validation">
+                    <h3>CREAR TIENDA</h3>
+                    <div class="col-md-4">
+                        <label for="codigoTienda" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Según el consecutivo">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nitTienda" class="form-label">Nit tienda</label>
+                        <input type="text" class="form-control" id="nitTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="ciudadTienda" class="form-label">Ciudad de ubicación</label>
+                        <select class="form-select" id="ciudadTienda" required>
+                          <option selected disabled value="">Seleccione la ciudad</option>
+                          <option>Santa fé de Bogotá</option>
+                          <option>Arauca</option>
+                          <option>Armenia</option>
+                          <option>Barranquilla</option>
+                          <option>Cali</option>
+                          <option>Cúcuta</option>
+                          <option>Cartagena</option>
+                          <option>Envigado</option>
+                          <option>Manizales</option>
+                          <option>Medellín</option>
+                          <option>Montería</option>
+                          <option>Neiva</option>
+                          <option>Pasto</option>
+                          <option>Pereira</option>
+                          <option>Popayán</option>
+                          <option>Quibdó</option>
+                          <option>Rioacha</option>
+                          <option>Santa Marta</option>
+                          <option>Sincelejo</option>
+                          <option>Tunja</option>
+                          <option>Valledupar</option>
+                          <option>Villavicencio</option>
+                          <option>Yopal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="direccionTienda" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccionTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="telefonoTienda" class="form-label">Teléfono tienda</label>
+                        <input type="text" class="form-control" id="telefonoTienda" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreAdministrador" class="form-label">Nombre del administrador</label>
+                        <input type="text" class="form-control" id="nombreAdministrador" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="telAdministrador" class="form-label">Teléfono del administrador</label>
+                        <input type="text" class="form-control" id="telAdministrador" required>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary margenBoton" type="submit">Guardar</button>
+                    </div>
+                </form>
+            </article>
+
+            <!--Actualizar tiendas-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center needs-validation">
+                    <h3>ACTUALIZAR TIENDA</h3>
+                    <div class = "col-md-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              Código de la tienda
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
+                            <label class="form-check-label" for="exampleRadios2">
+                              Nombre de la tienda
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="codigoTienda" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Actualizar</button>
+                    </div>
+                </form>
+            </article>
+
+            <!--Eliminar tienda-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center needs-validation">
+                    <h3>ELIMINAR TIENDA</h3>
+                    <div class = "col-md-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Código de la tienda
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Nombre de la tienda
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="codigoTienda" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Eliminar</button>
+                    </div>      
+                </form> 
+            </article>
+
+            <!--Consultar tienda-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center needs-validation">
+                    <h3>CONSULTAR TIENDA</h3>
+                    <div class = "col-md-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Código de la tienda
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Nombre de la tienda
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="codigoTienda" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Consultar</button>
+                    </div>      
+                </form> 
+            </article>
+
+            <!--Eliminar histórico de tienda-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center needs-validation">
+                    <h3>ELIMINAR HISTÓRICO DE TIENDA</h3>
+                    <div class = "col-md-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Código de la tienda
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Nombre de la tienda
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="codigoTienda" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Eliminar</button>
+                    </div>
+                </form>
+            </article>
+
+            <!--Consultar histórico de tienda-->
+            <article class = "row formatoUsuarios">
+                <form class="row g-3 text-center needs-validation">
+                    <h3>CONSULTAR HISTÓRICO DE TIENDA</h3>
+                    <div class = "col-md-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Código de la tienda
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Nombre de la tienda
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="codigoTienda" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" type="submit">Consultar</button>
+                    </div>
+                </form>
+            </article>
+
+            <!--Botón para regresar a la página principal-->
+            <article class = "row formatoUsuarios text-center">
+                <a href = "../src/paginaPrincipal.html" target = "_self">
+                    <button class="btn btn-primary" type="button">Regresar a la página principal</button>
+                </a>
+            </article>
+        </section>
+
+         <!--Bloque de certificaciones-->
+         <div class = "container-fluid text-center">
+            <div class = "row contenedorCertificaciones">
+                <img src = "../img/certificacionBasc1.jpeg" alt = "certifcacion Basc" class = "col-3 col-md-1 formatoCertificaciones">
+                <img src = "../img/certifcacionBunny1.jpeg" atl = "certificacion Bunny" class = "col-3 col-md-1 formatoCertificaciones">
+                <img src = "../img/operadorEconomico1.jpeg" alt = "operador económico" class = "col-3 col-md-1 formatoCertificaciones">
+                <img src = "../img/iso9901.png" alt = "iso 9001" class = "col-3 col-md-1 formatoCertificaciones">
+            </div>
+        </div>
+
+        <!--Pie de página-->
+        <footer class = "container-fluid">
+            <div class = "row pieDePagina">
+                <p class = "col-12 col-md-2">Copyright©2024</p>
+                <p class = "col-12 col-md-8">BEL STAR S.A. Todos los derechos reservados. Tocancipá, Cundinamarca.</p>
+                <p class = "col-12 col-md-2">By A&D Soft</p>
+            </div>   
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
