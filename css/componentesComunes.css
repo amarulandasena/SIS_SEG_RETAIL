@@ -54,9 +54,6 @@ html, body {
         margin-top: 10px;
     }
 
-    .formatoCertificaciones1 {
-        margin-top: 10px;
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -64,11 +61,7 @@ html, body {
         min-width: 50px;
         min-height: 50px;
     }
-    
-    .formatoCertificaciones1 {
-        min-width: 90px;
-        min-height: 50px;
-    }
+
 }
 
 /* Formato barra de navegación */
