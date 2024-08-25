@@ -51,6 +51,7 @@
 .formatoInfoFundacion h3 {
     font: italic bold 20px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:rgb(40, 155, 184);
+    margin-top: 8px;
 }
 
 .formatoInfoFundacion p {

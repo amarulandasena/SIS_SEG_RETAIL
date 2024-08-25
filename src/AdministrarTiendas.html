@@ -17,6 +17,7 @@
             Sis seg retail * Tiendas
         </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
     <body>
         <!--Encabezado y barra de navegación-->
@@ -112,17 +113,22 @@
             <article class = "row formatoUsuarios">
                 <form class="row g-3 text-center needs-validation">
                     <h3>CREAR TIENDA</h3>
+                    <p>
+                        <em>
+                            *Ingrese los datos de la tienda como registran en cámara de comercio o en el rut.
+                        </em>
+                    </p>
                     <div class="col-md-4">
                         <label for="codigoTienda" class="form-label">Código tienda</label>
                         <input type="text" class="form-control" id="codigoTienda" required placeholder = "Según el consecutivo">
                     </div>
                     <div class="col-md-4">
                         <label for="nitTienda" class="form-label">Nit tienda</label>
-                        <input type="text" class="form-control" id="nitTienda" required placeholder = "Como registra en cámara de comercio">
+                        <input type="text" class="form-control" id="nitTienda" required>
                     </div>
                     <div class="col-md-4">
                         <label for="nombreTienda" class="form-label">Nombre tienda</label>
-                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                        <input type="text" class="form-control" id="nombreTienda" required>
                     </div>
                     <div class="col-md-4">
                         <label for="ciudadTienda" class="form-label">Ciudad de ubicación</label>
@@ -155,7 +161,7 @@
                     </div>
                     <div class="col-md-4">
                         <label for="direccionTienda" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="direccionTienda" required placeholder = "Como registra en cámara de comercio">
+                        <input type="text" class="form-control" id="direccionTienda" required>
                     </div>
                     <div class="col-md-4">
                         <label for="telefonoTienda" class="form-label">Teléfono tienda</label>
@@ -163,16 +169,26 @@
                     </div>
                     <div class="col-md-4">
                         <label for="nombreAdministrador" class="form-label">Nombre del administrador</label>
-                        <input type="text" class="form-control" id="nombreAdministrador" required>
+                        <input type="text" class="form-control" id="nombreAdministrador" required placeholder = "Como registra en el documento de identidad">
                     </div>
                     <div class="col-md-4">
                         <label for="telAdministrador" class="form-label">Teléfono del administrador</label>
                         <input type="text" class="form-control" id="telAdministrador" required>
                     </div>
                     <div class="col-md-4">
-                        <button class="btn btn-primary margenBoton" type="submit">Guardar</button>
+                        <button class="btn btn-primary margenBoton" type="submit">Crear</button>
                     </div>
                 </form>
+            </article>
+
+            <!--Mensaje de instrucción para el ingreso de los datos-->
+            <article class = "row formatoUsuarios">
+                <p>
+                    <em>
+                        * Para actualizar eliminar o consultar los datos de la tienda o su histórico, ingrese solo el dato 
+                        correspondiente al método de busqueda seleccionado.
+                    </em>
+                </p>
             </article>
 
             <!--Actualizar tiendas-->
@@ -182,24 +198,24 @@
                     <div class = "col-md-2">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
-                            <label class="form-check-label" for="exampleRadios1">
+                            <label class="form-check-label" for="opcionCodigoTienda">
                               Código de la tienda
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <label class="form-check-label" for="opcionNombreTienda">
                               Nombre de la tienda
                             </label>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="codigoTienda" class="form-label">Código tienda</label>
-                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                        <label for="codigoTiendaActualizar" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTiendaActualizar" required placeholder = "Como registra en la base de datos">
                     </div>
                     <div class="col-md-4">
-                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
-                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                        <label for="nombreTiendaActualizar" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTiendaActualizar" required placeholder = "Como registra en cámara de comercio">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Actualizar</button>
@@ -213,25 +229,25 @@
                     <h3>ELIMINAR TIENDA</h3>
                     <div class = "col-md-2">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
-                            <label class="form-check-label" for="exampleRadios1">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTiendaE" value="codigo" checked>
+                            <label class="form-check-label" for="opcionCodigoTiendaE">
                                 Código de la tienda
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTiendaE" value="nombre">
+                            <label class="form-check-label" for="opcionNombreTiendaE">
                                 Nombre de la tienda
                             </label>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="codigoTienda" class="form-label">Código tienda</label>
-                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                        <label for="codigoTiendaEliminar" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTiendaEliminar" required placeholder = "Como registra en la base de datos">
                     </div>
                     <div class="col-md-4">
-                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
-                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                        <label for="nombreTiendaEliminar" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTiendaEliminar" required placeholder = "Como registra en cámara de comercio">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Eliminar</button>
@@ -245,25 +261,25 @@
                     <h3>CONSULTAR TIENDA</h3>
                     <div class = "col-md-2">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
-                            <label class="form-check-label" for="exampleRadios1">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTiendaC" value="codigo" checked>
+                            <label class="form-check-label" for="opcionCodigoTiendaC">
                                 Código de la tienda
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTiendaC" value="nombre">
+                            <label class="form-check-label" for="opcionNombreTiendaC">
                                 Nombre de la tienda
                             </label>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="codigoTienda" class="form-label">Código tienda</label>
-                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                        <label for="codigoTiendaConsultar" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTiendaConsultar" required placeholder = "Como registra en la base de datos">
                     </div>
                     <div class="col-md-4">
-                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
-                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                        <label for="nombreTiendaConsultar" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTiendaConsultar" required placeholder = "Como registra en cámara de comercio">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Consultar</button>
@@ -277,25 +293,25 @@
                     <h3>ELIMINAR HISTÓRICO DE TIENDA</h3>
                     <div class = "col-md-2">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
-                            <label class="form-check-label" for="exampleRadios1">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTiendaEH" value="codigo" checked>
+                            <label class="form-check-label" for="opcionCodigoTiendaEH">
                                 Código de la tienda
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTiendaEH" value="nombre">
+                            <label class="form-check-label" for="opcionNombreTiendaEH">
                                 Nombre de la tienda
                             </label>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="codigoTienda" class="form-label">Código tienda</label>
-                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                        <label for="codigoTiendaEliminarHistorico" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTiendaEliminarHistorico" required placeholder = "Como registra en la base de datos">
                     </div>
                     <div class="col-md-4">
-                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
-                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                        <label for="nombreTiendaEliminarHistorico" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTiendaEliminarHistorico" required placeholder = "Como registra en cámara de comercio">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Eliminar</button>
@@ -309,25 +325,25 @@
                     <h3>CONSULTAR HISTÓRICO DE TIENDA</h3>
                     <div class = "col-md-2">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTienda" value="codigo" checked>
-                            <label class="form-check-label" for="exampleRadios1">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionCodigoTiendaCH" value="codigo" checked>
+                            <label class="form-check-label" for="opcionCodigoTiendaCH">
                                 Código de la tienda
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTienda" value="nombre">
-                            <label class="form-check-label" for="exampleRadios2">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="opcionNombreTiendaCH" value="nombre">
+                            <label class="form-check-label" for="opcionNombreTiendaCH">
                                 Nombre de la tienda
                             </label>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="codigoTienda" class="form-label">Código tienda</label>
-                        <input type="text" class="form-control" id="codigoTienda" required placeholder = "Como fue creado por el digitador">
+                        <label for="codigoTiendaConsultarHistorico" class="form-label">Código tienda</label>
+                        <input type="text" class="form-control" id="codigoTiendaConsultarHistorico" required placeholder = "Como registra en la base de datos">
                     </div>
                     <div class="col-md-4">
-                        <label for="nombreTienda" class="form-label">Nombre tienda</label>
-                        <input type="text" class="form-control" id="nombreTienda" required placeholder = "Como registra en cámara de comercio">
+                        <label for="nombreTiendaConsultarHistorico" class="form-label">Nombre tienda</label>
+                        <input type="text" class="form-control" id="nombreTiendaConsultarHistorico" required placeholder = "Como registra en cámara de comercio">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Consultar</button>

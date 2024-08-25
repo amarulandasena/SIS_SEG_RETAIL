@@ -17,6 +17,7 @@
             Sis seg retail * Usuarios
         </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
     <body>
         <!--Encabezado y barra de navegación-->
@@ -110,12 +111,19 @@
 
             <!--Crear usuarios-->
             <article class = "row formatoUsuarios">
-                <form class="row g-3 text-center needs-validation">
+                <form class="row g-3 text-center needs-validation">   
                     <h3>CREAR USUARIO</h3>
+                    <p>
+                        <em>
+                            *Ingrese el número de identificación, los nombres y apellidos como registran en el documento de identidad.<br/>
+                            *Para la contraseña, asigne una de mínimo 5 caracteres.
+                        </em>    
+                    </p>
+
                     <div class="col-md-4">
                         <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
                         <select class="form-select" id="tipoIdentificacion" required>
-                          <option selected disabled value="">Seleecione el documento</option>
+                          <option selected disabled value="">Seleccione el documento</option>
                           <option>Cédula de ciudadanía</option>
                           <option>Cédula de extranjería</option>
                           <option>PEP</option>
@@ -124,15 +132,15 @@
                     </div>
                     <div class="col-md-4">
                         <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
-                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                        <input type="text" class="form-control" id="numeroIdentificacion" required>
                     </div>
                     <div class="col-md-4">
                         <label for="nombreUsuario" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="nombreUsuario" required placeholder="Como registra en su documento de identidad">
+                        <input type="text" class="form-control" id="nombreUsuario" required>
                     </div>
                     <div class="col-md-4">
                         <label for="apellidosUsuario" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidosUsuario" required placeholder="Como registra en su documento de identidad">
+                        <input type="text" class="form-control" id="apellidosUsuario" required>
                     </div>
                     <div class="col-md-4">
                         <label for="rol" class="form-label">Rol o cargo</label>
@@ -149,10 +157,10 @@
                     </div>
                     <div class="col-md-4">
                         <label for="contrasegna" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasegna" required placeholder="Mínimo 5 dígitos">
+                        <input type="password" class="form-control" id="contrasegna" required>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Guardar</button>
+                        <button class="btn btn-primary" type="submit">Crear</button>
                     </div>
                 </form>
             </article>
@@ -162,9 +170,9 @@
                 <form class="row g-3 text-center needs-validation">
                     <h3>MODIFICAR USUARIO</h3>
                     <div class="col-md-5">
-                        <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
-                        <select class="form-select" id="tipoIdentificacion" required>
-                          <option selected disabled value="">Seleecione el documento</option>
+                        <label for="tipoIdentificacionModificar" class="form-label">Tipo de identificación</label>
+                        <select class="form-select" id="tipoIdentificacionModificar" required>
+                          <option selected disabled value="">Seleccione el documento</option>
                           <option>Cédula de ciudadanía</option>
                           <option>Cédula de extranjería</option>
                           <option>PEP</option>
@@ -172,8 +180,8 @@
                         </select>
                     </div>
                     <div class="col-md-5">
-                        <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
-                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                        <label for="numeroIdentificacionModificar" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="numeroIdentificacionModificar" required placeholder="Sin puntos ni comas">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Modificar</button>
@@ -186,9 +194,9 @@
                 <form class="row g-3 text-center needs-validation">
                     <h3>ELIMINAR USUARIO</h3>
                     <div class="col-md-5">
-                        <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
-                        <select class="form-select" id="tipoIdentificacion" required>
-                          <option selected disabled value="">Seleecione el documento</option>
+                        <label for="tipoIdentificacionEliminar" class="form-label">Tipo de identificación</label>
+                        <select class="form-select" id="tipoIdentificacionEliminar" required>
+                          <option selected disabled value="">Seleccione el documento</option>
                           <option>Cédula de ciudadanía</option>
                           <option>Cédula de extranjería</option>
                           <option>PEP</option>
@@ -196,8 +204,8 @@
                         </select>
                     </div>
                     <div class="col-md-5">
-                        <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
-                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                        <label for="numeroIdentificacionEliminar" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="numeroIdentificacionEliminar" required placeholder="Sin puntos ni comas">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Eliminar</button>
@@ -210,9 +218,9 @@
                 <form class="row g-3 text-center needs-validation">
                     <h3>CONSULTAR USUARIO</h3>
                     <div class="col-md-5">
-                        <label for="tipoIdentificacion" class="form-label">Tipo de identificación</label>
-                        <select class="form-select" id="tipoIdentificacion" required>
-                          <option selected disabled value="">Seleecione el documento</option>
+                        <label for="tipoIdentificacionConsultar" class="form-label">Tipo de identificación</label>
+                        <select class="form-select" id="tipoIdentificacionConsultar" required>
+                          <option selected disabled value="">Seleccione el documento</option>
                           <option>Cédula de ciudadanía</option>
                           <option>Cédula de extranjería</option>
                           <option>PEP</option>
@@ -220,8 +228,8 @@
                         </select>
                     </div>
                     <div class="col-md-5">
-                        <label for="numeroIdentificacion" class="form-label">Número de identificación</label>
-                        <input type="text" class="form-control" id="numeroIdentificacion" required placeholder="Sin puntos ni comas">
+                        <label for="numeroIdentificacionConsultar" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="numeroIdentificacionConsultar" required placeholder="Sin puntos ni comas">
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary" type="submit">Consultar</button>
